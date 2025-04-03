@@ -1,0 +1,167 @@
+html, body {
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+    font-family: "Inter", sans-serif;
+    background-color: #f9f9f9;
+}
+
+.doadosContainer {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    min-height: 100%; 
+}
+
+.doadosContainer1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.livrosGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px;
+    justify-items: start;
+    align-items: center;
+    margin: 0 20px; 
+}
+
+.livroCard {
+    background: #fff;
+    padding: 15px;
+    border: 3px solid #005695;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 80%;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+        margin: 10px 0;
+        font-weight: normal;
+    }
+
+    p {
+        margin: 5px 0;
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    span {
+        display: block;
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+    }
+}
+
+/* Media Queries para Responsividade */
+@media (min-width: 900px) {
+    .doadosContainer1 {
+        font-size: 32px; 
+    }
+
+    .livrosGrid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+        margin: 90px 20px;
+    }
+
+    .livroCard {
+        width: 200px; 
+    }
+}
+
+@media (max-width: 899px) {
+    .doadosContainer1 {
+        font-size: 28px; 
+    }
+
+    .livrosGrid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+        margin: 40px 20px; 
+    }
+
+    .livroCard {
+        width: 100%; 
+        width: 220px;
+    }
+
+    .livroCard h3 {
+        font-size: 15px; 
+    }
+
+    .livroCard p,
+    .livroCard span {
+        font-size: 15px; 
+    }
+}
+
+@media (max-width: 600px) {
+    .doadosContainer1 {
+        font-size: 24px; 
+    }
+
+    .livrosGrid {
+        margin: 20px;
+        grid-template-columns: 1fr; 
+    }
+
+    .livroCard {
+        width: 100%; 
+        width: 200px;
+    }
+
+    .livroCard h3 {
+        font-size: 14px; 
+    }
+
+    .livroCard p,
+    .livroCard span {
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .doadosContainer1 {
+        font-size: 20px; 
+    }
+
+    .livrosGrid {
+        grid-template-columns: 1fr; 
+        margin: 10px; 
+        justify-items: center;
+    }
+
+    .livroCard {
+        width: 100%;
+        width: 180px;
+    }
+
+    .livroCard h3 {
+        font-size: 13px;
+    }
+
+    .livroCard p,
+    .livroCard span {
+        font-size: 13px;
+    }
+}

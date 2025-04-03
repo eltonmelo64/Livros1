@@ -1,0 +1,242 @@
+.main-content {
+  font-family: "Inter", sans-serif;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.titulo {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-transform: uppercase;
+  gap: 0.5rem;
+}
+
+.titulo span {
+  display: block;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner h2 {
+  position: absolute;
+  top: 50%;
+  left: 240px;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.8rem;
+  gap: 0rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.motivos-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 90px;
+}
+
+.motivo {
+  background: #0157944D;
+  border-radius: 12px;
+  padding: 20px;
+  width: 230px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.motivo:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.motivo img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.motivo p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Título da seção */
+.motivos h3 {
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+  margin-bottom: 20px;
+  color: #005695;
+  font-size: 35px;
+  padding: 0 90px;
+  margin-top: 100px;
+}
+
+/* Media Queries */
+@media (max-width: 1224px) {
+  .banner {
+    height: 350px;
+  }
+
+  .titulo {
+    font-size: 28px;
+    padding: 0 30px;
+  }
+
+  .banner h2 {
+    font-size: 1.1rem;
+  }
+
+  .motivos-container {
+    padding: 90px;
+  }
+
+  .motivo {
+    width: 220px;
+    max-width: 45%;
+  }
+
+  .motivos h3 {
+    font-size: 30px;
+    padding: 0 30px;
+    margin-top: 80px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .motivos-container {
+    justify-content: center;
+    gap: 15px;
+    padding: 30px 10px;
+  }
+
+  .titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5px auto;
+    width: 100%;
+  }
+
+  .titulo span {
+    display: block;
+    margin: 0 0;
+  }
+
+  .motivo {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+  }
+
+  .motivo img {
+    width: 40px;
+  }
+
+  .motivo p {
+    font-size: 0.9rem;
+  }
+
+  .banner h2 {
+    font-size: 1.2rem;
+    left: 50%;
+  }
+
+  .motivos-container {
+    padding: 30px 50px;
+    justify-content: space-evenly;
+  }
+
+  .motivos h3 {
+    font-size: 1.8rem;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .motivos-container {
+    gap: 10px;
+    padding: 20px 5px;
+  }
+
+  .titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5px auto;
+    width: 100%;
+  }
+
+  .titulo::before {
+    content: "";
+    display: none;
+  }
+
+  .titulo span {
+    display: block;
+    margin: 0 0;
+  }
+
+  .motivo {
+    width: 100%;
+    max-width: 280px;
+    padding: 10px;
+  }
+
+  .motivo img {
+    width: 35px;
+  }
+
+  .motivo p {
+    font-size: 0.8rem;
+  }
+
+  .banner h2 {
+    font-size: 1rem;
+    padding: 10px 0px;
+  }
+
+  .motivos-container {
+    padding: 20px 80px;
+    justify-content: space-evenly;
+  }
+
+  .motivos h3 {
+    font-size: 1.5rem;
+  }
+
+  .motivo {
+    width: 100%;
+    max-width: 95%;
+  }
+}
